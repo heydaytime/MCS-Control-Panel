@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>HeyDay SMP 🤖</title>
+  </head>
+  <body>
+    <header>
+      <h1>HeyDay SMP Control Panel</h1>
+
+      <svg
+        id="online"
+        class="status"
+        style="display: none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="25.055"
+        height="25.08"
+        viewBox="0 0 2037 2039"
+      >
+        <image
+          x="-4"
+          y="-4"
+          width="2045"
+          height="2045"
+          xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAADRElEQVRIibVWW0hUURRdcybn6SMZR1NztLIZG3t8FCRmEhFJYQVBD22ovoQCTTIxUPpQMxJMpD78i4jCoI+iMoWofKG/hZmOlpk6vqYhdXTGkZmJfe8Z8RVajhsuF+7Ze62z975n7SPxwoil5gUgA8BQpB7Q24zuq4P7XUndKc5Ie7hHrh5lM/oWxXBUm6xV0yGtLp3a3CnGuJbBAhaRkKMUgBw3I/pOfL3krPxcOL2tL9gjUEZxaoIaAjADQGeXYHep+nviI0XenWHdC3HVTdDLkRBBgLD7i2d7G14+G0+d4MBBPMQ7f3f8PQlgkPucyghpflyz5SDgATA758VJfAQSHC83D7/Nd0REAgjle1rJKPffACwA0iqUY3U39OEipkjExHip8JysMI8SgR5AyCoJwP2CARgA1Oc5tOlVZqsPE0JtBEY5ss70fHx13aE1iB8XlGY15uXFofg3OQ5N1rmeRsLl5dqDwtDB5Ps2a0sgz+BfCeYbEVEvxwHkajSHSm0xDYxS6s6ZrpnkPVgLAXj8RgBTAMy5jqdUF8kteVj0E6d1YJrX1V82CbFYJmVYHJtIdBd88zMBOF4vlW6nu4D9THWlyBYcHf8Z4fanupJZ5xFHRLQferHYCI9wOw87Ith4mEemWIcswHsyofUEsGArcznXiYS0LWiMzbKEd4rRwXXoiYRrWsJ75QjTNcqblxfotRvhxjQFtLLgDmn5Vn5K/Wl0TuLoV27fUM6Knbr+vcWqAcucnK3dpLxU+26rLCUOXS8jDY2vUmWouVyvtTcSrlsqANsrlSaaLYwqV2aLbc48H9Rkmaem/0vg5VlkmoJay37FfSB8PrSYMLTSqzqtJNOGZSbhagm6ABx7oLDVZu/QiEPL4xtabuF5fU0flnZPOdbFf4TV9kjKG01xR6uU1tpsvcaHCZ4C38essJe6PEO4KSOkmYI6ANj56uIS+r7ROvlRHy6YQlrrcw1a0WPJjPfZvNtKZN/pjsvOik9FU3H9Kq8gdjT3SSro/6f+0YmOdUqwq0T9w/hQkX93SPd8hdvKYhO1uTCw32gzeq5YkmaSug/MbLJrPbJAK3PFt8hHotvkbaFfWHWZPab9r/cuAH8ABEskiLvgjBUAAAAASUVORK5CYII="
+        />
+      </svg>
+
+      <svg
+        id="offline"
+        class="status"
+        style="display: none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="25.055"
+        height="25.08"
+        viewBox="0 0 2037 2039"
+      >
+        <image
+          x="-4"
+          y="-4"
+          width="2045"
+          height="2045"
+          xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAB7klEQVRIibXWwWvTYBzG8W/e1M10kCmmSUXZSUE8eBK2ditzXr0ouIH+BXoUVBheJzKdsNv8D8TVm9fp3Nxm9ejBg6AiqKNtAlugqWbNIu8g0nVtp2vznPIS8vuQBN7nVULO0i5T2KdN1JspEpl+xPFDKL1bhP4m2z/L1AoOwdwkxqd2M1oiMziXztE7m6PvlIbScsAvQpapfP7A71u3Ofbin5F53FcT6GNtX7FJ8rhL4+gX9kXe4K3nSKb/F4iyilccbnhe1C/W8IqdADLDJK0C1XJTZB73ZZak2QkQZQjNyOO+3oU8xBmaQL/YDSDKOProNPbIX+Q8h591E4gyiPZUXipTmCfuYXyPA5G5jz0gTNQ7cQEyJupdYZHIxYlYJEZEP6oVJ3IU1RI9KD1xInK+8An9OBE5X2wSFONENghKokhtNU6kSLAiSgTT8SK1Rzu78CKVb2P0DXQbWML7MUry5M628p7qtW4DMgW869T3SR53sVnhHDTPcVeuoudoLK23VEsZtFSnwDuqziCaEa13lVYGzZTF1QmwhleuB/YgMlmS6Tzu8kEA+YmaFd8eREYWzgzO5QUqX3zCtoPl/QUqXx/jXIn+QWP2PXc9wD5joN5IkcgeQaTlXuQTbm2wvS7PXTbBk0mMjy0HAH8Ag3eblbokPmEAAAAASUVORK5CYII="
+        />
+      </svg>
+      <p id="ping"></p>
+    </header>
+
+    <div class="container">
+      <div class="terminal">
+        <output id="output">
+          <!-- To be populated by javascript -->
+        </output>
+      </div>
+      <div class="in">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="clear">Clear Terminal</button>
+
+        <select id="ram">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+
+        <!-- <button id="dark-mode">💀</button> -->
+      </div>
+      <div class="ram">
+        <div id="ram-allocation" class="ram-text"></div>
+        <div id="ram-status" class="ram-text"></div>
+      </div>
+
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

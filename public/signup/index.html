@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - HeyDayTime Accounts</title>
+  </head>
+  <body>
+    <h1>Signup</h1>
+    <form action="/api/v1/signup" method="post">
+      <input
+        type="firstName"
+        name="firstName"
+        placeholder="First Name"
+        required
+      />
+      <input type="lastName" name="lastName" placeholder="Last Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input type="submit" />
+    </form>
+    <a href="/login">Login</a>
+  </body>
+</html>
